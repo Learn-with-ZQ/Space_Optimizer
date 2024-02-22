@@ -1,0 +1,51 @@
+.m-img-size {
+  width: 100%;
+  height: 90vh;
+  background-image: url("../images/Rectangle3.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-yellow {
+  background-color: #ffca2c !important;
+}
+.btn-yellow-50 {
+  background: linear-gradient(to right, #ffd04fb6, #ffdd80b2);
+}
+.img-size {
+  height: 200px;
+}
+.contact {
+  min-height: 90vh;
+}
+.input-h {
+  height: 100px;
+}
+a {
+  text-decoration: none !important;
+}
+.btn-yellow:hover {
+  background-color: #ffd967 !important;
+
+  transform: translate(1px, 1px);
+  transition: 0.5s;
+}
+.h-custom {
+  height: 450px;
+}
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+  .custom-height {
+    height: 300px;
+  }
+  .img-size {
+    height: 250px;
+  }
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 2000px) {
+}

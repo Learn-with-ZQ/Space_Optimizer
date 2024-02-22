@@ -1,0 +1,358 @@
+﻿<%@ Master Language="VB" CodeFile="Main.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../Scripts/css/style.css" />
+    <link rel="stylesheet" href="../Scripts/css/MainPage.css" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-footer {
+            position: relative;
+            background: #1e2129;
+        }
+
+        .footer-content {
+            position: relative;
+            padding: 20px 0px;
+            overflow: hidden;
+        }
+
+            .footer-content:before {
+                position: absolute;
+                content: "";
+                background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+                width: 744px;
+                height: 365px;
+                top: 50px;
+                right: 0px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation-name: float-bob;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                -webkit-animation-name: float-bob;
+                -webkit-animation-duration: 30s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                -moz-animation-name: float-bob;
+                -moz-animation-duration: 30s;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-timing-function: linear;
+                -ms-animation-name: float-bob;
+                -ms-animation-duration: 30s;
+                -ms-animation-iteration-count: infinite;
+                -ms-animation-timing-function: linear;
+                -o-animation-name: float-bob;
+                -o-animation-duration: 30s;
+                -o-animation-iteration-count: infinite;
+                -o-animation-timing-function: linear;
+            }
+
+            .footer-content .logo-widget {
+                position: relative;
+                margin-top: -5px;
+            }
+
+                .footer-content .logo-widget .footer-social li {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 9px;
+                }
+
+                    .footer-content .logo-widget .footer-social li:last-child {
+                        margin-right: 0px;
+                    }
+
+                    .footer-content .logo-widget .footer-social li a {
+                        position: relative;
+                        display: inline-block;
+                        width: 42px;
+                        height: 42px;
+                        line-height: 42px;
+                        background: #2e3138;
+                        color: #9ea0a9;
+                        text-align: center;
+                        border-radius: 50%;
+                    }
+
+                        .footer-content .logo-widget .footer-social li a:hover {
+                            color: #ffffff;
+                            background: #ff5e14;
+                        }
+
+                .footer-content .logo-widget .logo-box {
+                    margin-bottom: 25px;
+                }
+
+                .footer-content .logo-widget .text p {
+                    color: #9ea0a9;
+                    margin-bottom: 32px;
+                }
+
+            .footer-content .footer-title {
+                position: relative;
+                font-size: 24px;
+                line-height: 35px;
+                font-family: "Playfair Display", serif;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 27px;
+            }
+
+            .footer-content .service-widget .list li {
+                display: block;
+                margin-bottom: 12px;
+            }
+
+                .footer-content .service-widget .list li a {
+                    position: relative;
+                    display: inline-block;
+                    color: #9ea0a9;
+                }
+
+                    .footer-content .service-widget .list li a:hover {
+                        color: #ff5e14;
+                    }
+
+            .footer-content .contact-widget p {
+                color: #9ea0a9;
+                margin-bottom: 15px;
+            }
+
+            .footer-content .contact-widget {
+                margin-left: 90px;
+            }
+
+                .footer-content .contact-widget .footer-title {
+                    margin-bottom: 29px;
+                }
+
+        /** footer-bottom **/
+
+        .footer-bottom {
+            position: relative;
+            background: #13151a;
+            padding: 15px 0px;
+        }
+
+            .footer-bottom .copyright,
+            .footer-bottom .copyright a,
+            .footer-bottom .footer-nav li a {
+                position: relative;
+                color: #9ea0a9;
+            }
+
+                .footer-bottom .copyright a:hover,
+                .footer-bottom .footer-nav li a:hover {
+                    color: #ff5e14;
+                }
+
+            .footer-bottom .footer-nav {
+                position: relative;
+                text-align: right;
+            }
+
+                .footer-bottom .footer-nav li {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 29px;
+                }
+
+                    .footer-bottom .footer-nav li:first-child {
+                        margin-left: 0px;
+                    }
+
+                    .footer-bottom .footer-nav li:before {
+                        position: absolute;
+                        content: "";
+                        background: #9ea0a9;
+                        width: 1px;
+                        height: 14px;
+                        top: 7px;
+                        left: -18px;
+                    }
+
+                    .footer-bottom .footer-nav li:first-child:before {
+                        display: none;
+                    }
+
+        .logo-box img {
+            max-width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg bg-white top-0">
+            <div class="container">
+                <a class="navbar-brand" href="#">Space Optimizer</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="addShapes.aspx">Add Shapes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Optimize.aspx">Optimizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutUs.aspx">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.aspx">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex gap-3">
+                    <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-yellow rounded-4 px-3 d-none d-lg-block" Text="Login" />
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div id="waitingdiv" class="divwaiting">
+                    <div style="margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+                        <?xml version="1.0" encoding="utf-8" ?>
+                        <svg width='90px' height='120px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 70" preserveAspectRatio="xMidYMid" class="uil-gears">
+                            <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><g transform="translate(-20,-20)"><path d="M79.9,52.6C80,51.8,80,50.9,80,50s0-1.8-0.1-2.6l-5.1-0.4c-0.3-2.4-0.9-4.6-1.8-6.7l4.2-2.9c-0.7-1.6-1.6-3.1-2.6-4.5 L70,35c-1.4-1.9-3.1-3.5-4.9-4.9l2.2-4.6c-1.4-1-2.9-1.9-4.5-2.6L59.8,27c-2.1-0.9-4.4-1.5-6.7-1.8l-0.4-5.1C51.8,20,50.9,20,50,20 s-1.8,0-2.6,0.1l-0.4,5.1c-2.4,0.3-4.6,0.9-6.7,1.8l-2.9-4.1c-1.6,0.7-3.1,1.6-4.5,2.6l2.1,4.6c-1.9,1.4-3.5,3.1-5,4.9l-4.5-2.1 c-1,1.4-1.9,2.9-2.6,4.5l4.1,2.9c-0.9,2.1-1.5,4.4-1.8,6.8l-5,0.4C20,48.2,20,49.1,20,50s0,1.8,0.1,2.6l5,0.4 c0.3,2.4,0.9,4.7,1.8,6.8l-4.1,2.9c0.7,1.6,1.6,3.1,2.6,4.5l4.5-2.1c1.4,1.9,3.1,3.5,5,4.9l-2.1,4.6c1.4,1,2.9,1.9,4.5,2.6l2.9-4.1 c2.1,0.9,4.4,1.5,6.7,1.8l0.4,5.1C48.2,80,49.1,80,50,80s1.8,0,2.6-0.1l0.4-5.1c2.3-0.3,4.6-0.9,6.7-1.8l2.9,4.2 c1.6-0.7,3.1-1.6,4.5-2.6L65,69.9c1.9-1.4,3.5-3,4.9-4.9l4.6,2.2c1-1.4,1.9-2.9,2.6-4.5L73,59.8c0.9-2.1,1.5-4.4,1.8-6.7L79.9,52.6 z M50,65c-8.3,0-15-6.7-15-15c0-8.3,6.7-15,15-15s15,6.7,15,15C65,58.3,58.3,65,50,65z" fill="#103a50"><animateTransform attributeName="transform" type="rotate" from="90 50 50" to="0 50 50" dur="1s" repeatCount="indefinite"></animateTransform>
+                            </path>
+                            </g><g transform="translate(20,20) rotate(15 50 50)"><path d="M79.9,52.6C80,51.8,80,50.9,80,50s0-1.8-0.1-2.6l-5.1-0.4c-0.3-2.4-0.9-4.6-1.8-6.7l4.2-2.9c-0.7-1.6-1.6-3.1-2.6-4.5 L70,35c-1.4-1.9-3.1-3.5-4.9-4.9l2.2-4.6c-1.4-1-2.9-1.9-4.5-2.6L59.8,27c-2.1-0.9-4.4-1.5-6.7-1.8l-0.4-5.1C51.8,20,50.9,20,50,20 s-1.8,0-2.6,0.1l-0.4,5.1c-2.4,0.3-4.6,0.9-6.7,1.8l-2.9-4.1c-1.6,0.7-3.1,1.6-4.5,2.6l2.1,4.6c-1.9,1.4-3.5,3.1-5,4.9l-4.5-2.1 c-1,1.4-1.9,2.9-2.6,4.5l4.1,2.9c-0.9,2.1-1.5,4.4-1.8,6.8l-5,0.4C20,48.2,20,49.1,20,50s0,1.8,0.1,2.6l5,0.4 c0.3,2.4,0.9,4.7,1.8,6.8l-4.1,2.9c0.7,1.6,1.6,3.1,2.6,4.5l4.5-2.1c1.4,1.9,3.1,3.5,5,4.9l-2.1,4.6c1.4,1,2.9,1.9,4.5,2.6l2.9-4.1 c2.1,0.9,4.4,1.5,6.7,1.8l0.4,5.1C48.2,80,49.1,80,50,80s1.8,0,2.6-0.1l0.4-5.1c2.3-0.3,4.6-0.9,6.7-1.8l2.9,4.2 c1.6-0.7,3.1-1.6,4.5-2.6L65,69.9c1.9-1.4,3.5-3,4.9-4.9l4.6,2.2c1-1.4,1.9-2.9,2.6-4.5L73,59.8c0.9-2.1,1.5-4.4,1.8-6.7L79.9,52.6 z M50,65c-8.3,0-15-6.7-15-15c0-8.3,6.7-15,15-15s15,6.7,15,15C65,58.3,58.3,65,50,65z" fill="#42ABFA"><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="90 50 50" dur="1s" repeatCount="indefinite"></animateTransform>
+                            </path>
+                            </g></svg>
+                        <br />
+                        <b style="color: white; font-family: Calibri;">&nbsp;&nbsp;&nbsp; Loading...</b>
+                    </div>
+
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <section>
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                                <div class="logo-widget footer-widget">
+                                    <figure class="logo-box">
+                                        <a href="#" class="fs-3 text-white fw-semibold">
+                                            <img src="" alt="" />Space Optimizer</a>
+                                    </figure>
+                                    <div class="text">
+                                        <p>
+                                            An efficient web tool for optimizing 2D box packing, ideal for logistics and storage management
+                                        </p>
+                                    </div>
+                                    <ul class="footer-social">
+                                        <li>
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
+                                <div class="service-widget footer-widget">
+                                    <div class="footer-title">Services</div>
+                                    <ul class="list">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="home.aspx">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="addShapes.aspx">Add Shapes</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="Optimize.aspx">Optimizer</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="aboutUs.aspx">About us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contactUs.aspx">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- main-footer end -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 column">
+                            <div class="copyright">
+                                <a href="#">Anup</a> &copy; 2019 All Right Reserved
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 column">
+                            <ul class="footer-nav">
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</body>
+<script src="../Scripts/app.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</html>
